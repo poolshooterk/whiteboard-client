@@ -3,6 +3,6 @@
   "outputDirectory": ".next",
   "framework": "nextjs",
   "env": {
-    "NEXT_PUBLIC_SERVER_URL": "https://your-heroku-app.herokuapp.com"
+    "NEXT_PUBLIC_SERVER_URL": "https://whiteboard-server-j6aw.onrender.com"
   }
 }
