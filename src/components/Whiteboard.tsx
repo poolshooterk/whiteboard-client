@@ -19,9 +19,9 @@ export default function Whiteboard() {
   const [currentColor, setCurrentColor] = useState('#000000');
   const [currentSize, setCurrentSize] = useState(2);
   const [roomId, setRoomId] = useState('default-room');
+  const [serverUrl] = useState('https://whiteboard-server-j6aw.onrender.com');
 
   useEffect(() => {
-    const serverUrl = 'https://whiteboard-server-j6aw.onrender.com';
     console.log('Connecting to server:', serverUrl);
     const newSocket = io(serverUrl);
     setSocket(newSocket);
@@ -178,6 +178,10 @@ export default function Whiteboard() {
             className="px-2 py-1 border rounded text-sm"
             placeholder="ルームID"
           />
+        </div>
+
+        <div className="flex items-center gap-2">
+          <span className="text-xs text-gray-500">サーバー: {serverUrl}</span>
         </div>
 
         <button
